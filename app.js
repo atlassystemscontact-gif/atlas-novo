@@ -47,9 +47,32 @@
       "clients.item4": "Operações escaláveis",
       "clients.item5": "Atendimento inteligente",
       "clients.item6": "Crescimento sustentável",
-      "projects.eyebrow": "Soluções digitais",
-      "projects.title": "Tecnologia aplicada aos desafios reais do seu negócio.",
-      "projects.description": "Cada solução nasce de um problema concreto e é construída para aumentar eficiência, produtividade, conversão e capacidade de crescimento.",
+      "projects.eyebrow": "Projetos selecionados",
+      "projects.title": "Experiências digitais construídas para marcar.",
+      "projects.description": "Do conceito à experiência final, unimos estratégia, direção visual e tecnologia em projetos que demonstram a capacidade criativa da Atlas.",
+      "projects.conceptLabel": "Projeto conceitual",
+      "projects.highlightsLabel": "Destaques do projeto",
+      "projects.viewProject": "Ver projeto",
+      "projects.omega.category": "Saúde · Landing page premium",
+      "projects.omega.title": "Clínica Lúmina",
+      "projects.omega.description": "Experiência digital para uma clínica odontológica contemporânea, com apresentação de tratamentos, tecnologia, diferenciais e agendamento.",
+      "projects.omega.highlight1": "Direção premium",
+      "projects.omega.highlight2": "Animações",
+      "projects.omega.highlight3": "Foco em conversão",
+      "projects.omega.previewAlt": "Página inicial do projeto Clínica Lúmina",
+      "projects.omega.linkLabel": "Abrir projeto Clínica Lúmina",
+      "projects.alpine.category": "Hospitalidade · Experiência imersiva",
+      "projects.alpine.title": "Alpine Sanctuaries",
+      "projects.alpine.description": "Atlas editorial de hotéis suíços com narrativa visual, transições cinematográficas, seleção de destinos e exploração interativa.",
+      "projects.alpine.highlight1": "Storytelling",
+      "projects.alpine.highlight2": "Movimento imersivo",
+      "projects.alpine.highlight3": "Experiência editorial",
+      "projects.alpine.previewAlt": "Página inicial do projeto Alpine Sanctuaries",
+      "projects.alpine.linkLabel": "Abrir projeto Alpine Sanctuaries",
+      "projects.others.kicker": "Portfólio Atlas",
+      "projects.others.title": "Outros",
+      "projects.others.description": "Explore mais experiências digitais criadas pela Atlas Systems.",
+      "projects.others.linkLabel": "Ver outros projetos no portfólio da Atlas Systems",
       "projects.demoLabel": "Demonstração conceitual",
       "projects.viewCase": "Conhecer solução",
       "projects.examplesLabel": "Exemplos de aplicação",
@@ -387,9 +410,32 @@
       "clients.item4": "Scalable operations",
       "clients.item5": "Intelligent service",
       "clients.item6": "Sustainable growth",
-      "projects.eyebrow": "Digital solutions",
-      "projects.title": "Technology applied to your real business challenges.",
-      "projects.description": "Every solution starts with a concrete problem and is built to improve efficiency, productivity, conversion, and growth capacity.",
+      "projects.eyebrow": "Selected projects",
+      "projects.title": "Digital experiences designed to make an impact.",
+      "projects.description": "From concept to final experience, we combine strategy, visual direction, and technology in projects that showcase Atlas' creative capabilities.",
+      "projects.conceptLabel": "Concept project",
+      "projects.highlightsLabel": "Project highlights",
+      "projects.viewProject": "View project",
+      "projects.omega.category": "Healthcare · Premium landing page",
+      "projects.omega.title": "Lúmina Clinic",
+      "projects.omega.description": "A digital experience for a contemporary dental clinic, presenting treatments, technology, key differentiators, and appointment booking.",
+      "projects.omega.highlight1": "Premium direction",
+      "projects.omega.highlight2": "Animations",
+      "projects.omega.highlight3": "Conversion focus",
+      "projects.omega.previewAlt": "Lúmina Clinic project homepage",
+      "projects.omega.linkLabel": "Open Lúmina Clinic project",
+      "projects.alpine.category": "Hospitality · Immersive experience",
+      "projects.alpine.title": "Alpine Sanctuaries",
+      "projects.alpine.description": "An editorial atlas of Swiss hotels featuring visual storytelling, cinematic transitions, destination selection, and interactive exploration.",
+      "projects.alpine.highlight1": "Storytelling",
+      "projects.alpine.highlight2": "Immersive motion",
+      "projects.alpine.highlight3": "Editorial experience",
+      "projects.alpine.previewAlt": "Alpine Sanctuaries project homepage",
+      "projects.alpine.linkLabel": "Open Alpine Sanctuaries project",
+      "projects.others.kicker": "Atlas portfolio",
+      "projects.others.title": "Others",
+      "projects.others.description": "Explore more digital experiences created by Atlas Systems.",
+      "projects.others.linkLabel": "View more projects in the Atlas Systems portfolio",
       "projects.demoLabel": "Concept demonstration",
       "projects.viewCase": "Explore solution",
       "projects.examplesLabel": "Application examples",
@@ -762,7 +808,8 @@
     const translatedAttributes = [
       ["data-i18n-content", "content"],
       ["data-i18n-placeholder", "placeholder"],
-      ["data-i18n-aria-label", "aria-label"]
+      ["data-i18n-aria-label", "aria-label"],
+      ["data-i18n-alt", "alt"]
     ];
 
     translatedAttributes.forEach(([dataAttribute, targetAttribute]) => {
@@ -805,7 +852,7 @@
 
   function validateTranslationCoverage() {
     const keys = new Set();
-    ["data-i18n", "data-i18n-content", "data-i18n-placeholder", "data-i18n-aria-label"].forEach((attribute) => {
+    ["data-i18n", "data-i18n-content", "data-i18n-placeholder", "data-i18n-aria-label", "data-i18n-alt"].forEach((attribute) => {
       document.querySelectorAll(`[${attribute}]`).forEach((element) => {
         const key = element.getAttribute(attribute);
         if (key) keys.add(key);

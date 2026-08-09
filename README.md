@@ -10,7 +10,7 @@ Na raiz do projeto:
 python3 -m http.server 4173
 ```
 
-Depois acesse `http://localhost:4173`.
+Depois acesse `http://localhost:3005`.
 
 ## Principais recursos
 
