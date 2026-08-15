@@ -462,11 +462,11 @@
   }
 
   function resize() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.35);
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.1);
     const desiredWidth = Math.max(1, canvas.clientWidth * dpr);
     const desiredHeight = Math.max(1, canvas.clientHeight * dpr);
-    const maxPixels = 1_800_000;
-    const maxDimension = 1900;
+    const maxPixels = 1_200_000;
+    const maxDimension = 1600;
     const pixelScale = Math.sqrt(maxPixels / (desiredWidth * desiredHeight));
     const dimensionScale = maxDimension / Math.max(desiredWidth, desiredHeight);
     const renderScale = Math.min(1, pixelScale, dimensionScale);
@@ -497,6 +497,9 @@
   let sceneVisible = true;
   let frameRequest = 0;
   let resizeTimer = 0;
+  let lastDrawTime = 0;
+  let sceneHeight = 1;
+  const frameInterval = 1000 / 36;
 
   const mix = (from, to, amount) => from + (to - from) * amount;
 
@@ -507,6 +510,12 @@
 
   function render(now) {
     frameRequest = 0;
+    if (!prefersReducedMotion && lastDrawTime && now - lastDrawTime < frameInterval) {
+      requestRender();
+      return;
+    }
+
+    lastDrawTime = now;
     const delta = lastTime ? Math.min((now - lastTime) / 1000, .05) : 0;
     lastTime = now;
 
@@ -559,15 +568,19 @@
       gl.uniform2f(aberrationUniforms.resolution, width, height);
       gl.uniform1f(aberrationUniforms.amount, aberration);
       gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+      if (!scene.classList.contains("is-webgl-ready")) {
+        scene.classList.remove("webgl-fallback");
+        scene.classList.add("is-webgl-ready");
+      }
     }
 
     if (!prefersReducedMotion) requestRender();
   }
 
   function updatePointer(clientX, clientY) {
-    const bounds = canvas.getBoundingClientRect();
-    pointer.targetX = Math.min(1, Math.max(0, (clientX - bounds.left) / bounds.width));
-    pointer.targetY = Math.min(1, Math.max(0, 1 - (clientY - bounds.top) / bounds.height));
+    pointer.targetX = Math.min(1, Math.max(0, clientX / Math.max(1, window.innerWidth)));
+    pointer.targetY = Math.min(1, Math.max(0, 1 - clientY / Math.max(1, window.innerHeight)));
   }
 
   window.addEventListener("pointermove", (event) => updatePointer(event.clientX, event.clientY), { passive: true });
@@ -576,13 +589,13 @@
   }, { passive: true });
 
   window.addEventListener("scroll", () => {
-    const bounds = scene.getBoundingClientRect();
-    scrollEffect = Math.max(0, Math.min(1, -bounds.top / (bounds.height * .23)));
+    scrollEffect = Math.max(0, Math.min(1, window.scrollY / (sceneHeight * .23)));
   }, { passive: true });
 
   window.addEventListener("resize", () => {
     window.clearTimeout(resizeTimer);
     resizeTimer = window.setTimeout(() => {
+      sceneHeight = Math.max(1, scene.clientHeight);
       resize();
       requestRender();
     }, 140);
@@ -626,6 +639,7 @@
     }
   });
 
+  sceneHeight = Math.max(1, scene.clientHeight);
   resize();
   requestRender();
 })();

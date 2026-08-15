@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap");
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("assets/fonts/inter-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("assets/fonts/inter-tight-latin.woff2") format("woff2");
+}
 
 :root {
   --paper: #eeeeec;
@@ -86,6 +100,11 @@ canvas {
 
 section[id] {
   scroll-margin-top: var(--header-height);
+}
+
+main > section:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }
 
 .sr-only {
@@ -218,8 +237,8 @@ section[id] {
   display: grid;
   place-items: center;
   background: var(--paper);
-  animation: loader-dismiss 700ms 1.55s var(--ease-out) forwards;
-  transition: visibility 700ms linear, opacity 700ms var(--ease-out);
+  animation: loader-dismiss 420ms .55s var(--ease-out) forwards;
+  transition: visibility 420ms linear, opacity 420ms var(--ease-out);
 }
 
 #loader::before,
@@ -1960,7 +1979,16 @@ body.menu-open .menu-toggle span:last-child {
   left: var(--gutter);
   max-width: 210px;
   opacity: 0;
-  animation: hero-copy-in 900ms 1.5s var(--ease-out) forwards;
+  animation: hero-copy-in 700ms .45s var(--ease-out) forwards;
+}
+
+#hero-canvas {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+#scene.is-webgl-ready #hero-canvas {
+  opacity: 1;
 }
 
 .hero .hero-content > h1,
@@ -4621,6 +4649,10 @@ body.menu-open .menu-toggle span:last-child {
   object-position: center;
   transform: translateY(-50%) perspective(900px) rotateX(2deg) rotateY(-3deg);
   transition: transform 550ms var(--ease-out), box-shadow 550ms var(--ease-out), filter 350ms ease;
+}
+
+.project-site-visual picture {
+  display: contents;
 }
 
 .project-case-preview:hover .project-site-visual img,

@@ -877,14 +877,9 @@
       ? new Promise((resolve) => document.addEventListener("DOMContentLoaded", resolve, { once: true }))
       : Promise.resolve();
 
-    const fontsReady = document.fonts?.ready
-      ? document.fonts.ready.catch(() => undefined)
-      : Promise.resolve();
+    const minimumDelay = new Promise((resolve) => window.setTimeout(resolve, reducedMotionQuery.matches ? 0 : 180));
 
-    const fallbackDelay = reducedMotionQuery.matches ? 120 : 1400;
-    const fallback = new Promise((resolve) => window.setTimeout(resolve, fallbackDelay));
-
-    Promise.race([Promise.all([domReady, fontsReady]), fallback]).then(() => {
+    Promise.all([domReady, minimumDelay]).then(() => {
       window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
           document.body?.classList.add("is-ready");
@@ -893,6 +888,33 @@
         });
       });
     });
+  }
+
+  function initHeroExperience() {
+    const scene = document.getElementById("scene");
+    const canvas = document.getElementById("hero-canvas");
+    if (!scene || !canvas) return;
+
+    scene.classList.add("webgl-fallback");
+
+    const useLightweightVersion = reducedMotionQuery.matches || window.matchMedia("(max-width: 820px)").matches;
+    if (useLightweightVersion) {
+      canvas.hidden = true;
+      return;
+    }
+
+    const loadWebGL = () => {
+      if (document.querySelector('script[data-atlas-webgl]')) return;
+      const script = document.createElement("script");
+      script.src = "hero3d.js?v=6";
+      script.async = true;
+      script.dataset.atlasWebgl = "true";
+      document.head.append(script);
+    };
+
+    window.addEventListener("pointermove", loadWebGL, { once: true, passive: true });
+    window.addEventListener("pointerdown", loadWebGL, { once: true, passive: true });
+    window.setTimeout(loadWebGL, 8000);
   }
 
   function initHeader() {
@@ -912,7 +934,6 @@
       }
     };
 
-    update();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
@@ -921,8 +942,9 @@
     const navigation = document.getElementById("primary-nav");
     if (!menuToggle || !navigation) return;
 
+    const mobileNavigationQuery = window.matchMedia("(max-width: 820px)");
     const syncNavigationInert = (open) => {
-      navigation.inert = window.innerWidth <= 820 && !open;
+      navigation.inert = mobileNavigationQuery.matches && !open;
     };
 
     const setMenuState = (open, returnFocus = false) => {
@@ -970,7 +992,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 820 && menuToggle.getAttribute("aria-expanded") === "true") {
+      if (!mobileNavigationQuery.matches && menuToggle.getAttribute("aria-expanded") === "true") {
         setMenuState(false);
       } else {
         syncNavigationInert(menuToggle.getAttribute("aria-expanded") === "true");
@@ -1282,9 +1304,10 @@
       let frame = 0;
       let pointerX = 0;
       let pointerY = 0;
+      let bounds = null;
 
       const render = () => {
-        const bounds = card.getBoundingClientRect();
+        if (!bounds) bounds = card.getBoundingClientRect();
         const x = (pointerX - bounds.left) / bounds.width - 0.5;
         const y = (pointerY - bounds.top) / bounds.height - 0.5;
         const rotateX = (-y * 4.5).toFixed(2);
@@ -1293,17 +1316,22 @@
         frame = 0;
       };
 
+      card.addEventListener("pointerenter", () => {
+        bounds = card.getBoundingClientRect();
+        card.style.willChange = "transform";
+      });
+
       card.addEventListener("pointermove", (event) => {
         if (reducedMotionQuery.matches) return;
         pointerX = event.clientX;
         pointerY = event.clientY;
-        card.style.willChange = "transform";
         if (!frame) frame = window.requestAnimationFrame(render);
       });
 
       card.addEventListener("pointerleave", () => {
         if (frame) window.cancelAnimationFrame(frame);
         frame = 0;
+        bounds = null;
         card.style.removeProperty("transform");
         card.style.removeProperty("will-change");
       });
@@ -1544,6 +1572,7 @@
     validateTranslationCoverage();
     applyLanguage(currentLanguage, false);
     initHeader();
+    initHeroExperience();
     initMobileMenu();
     initLanguageToggle();
     initServicesAccordion();
