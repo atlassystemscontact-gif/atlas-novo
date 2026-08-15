@@ -1,0 +1,66 @@
+# Atlas Systems
+
+> A Atlas Systems é uma empresa brasileira de soluções digitais especializada em automação com inteligência artificial, landing pages de alta conversão, sistemas personalizados, bots inteligentes e integrações entre sistemas.
+
+A Atlas Systems transforma desafios operacionais e comerciais em experiências digitais eficientes, escaláveis e orientadas a resultados. A empresa atende clientes no Brasil e no exterior. O conteúdo principal do site está disponível em português do Brasil, com opção de navegação em inglês.
+
+Informações essenciais:
+
+- Nome oficial: Atlas Systems
+- Localização: São Paulo, Brasil
+- Área de atuação: desenvolvimento de sistemas, automação, inteligência artificial e experiências digitais
+- Atendimento: Brasil e exterior
+- Idiomas do site: português do Brasil e inglês
+- E-mail: atlassystems.contact@gmail.com
+- WhatsApp: +55 11 93053-4679
+
+Serviços e capacidades:
+
+- Automação com inteligência artificial: processos internos, tarefas repetitivas, fluxos de atendimento e operações baseadas em dados.
+- Landing pages: páginas rápidas e estratégicas para campanhas, captação de leads, vendas e posicionamento de marca.
+- Sistemas personalizados: plataformas internas, dashboards, sistemas de gestão e ferramentas operacionais sob medida.
+- Bots inteligentes: automação de atendimento, vendas, suporte, qualificação e agendamento, incluindo WhatsApp.
+- Integração de sistemas: conexão entre ferramentas, dados, APIs e canais para reduzir retrabalho.
+- Otimização contínua: análise de desempenho, testes, melhorias técnicas e evolução de soluções digitais.
+
+Processo de trabalho:
+
+- Diagnóstico: compreensão da empresa, dos desafios e dos objetivos.
+- Planejamento estratégico: definição da solução, das prioridades e do caminho de implementação.
+- Desenvolvimento: criação com foco em performance, usabilidade, segurança e escalabilidade.
+- Implementação: integração da solução à operação do cliente.
+- Otimização contínua: acompanhamento de resultados e evolução da solução.
+
+Posicionamento:
+
+A missão da Atlas Systems é ajudar empresas a crescer através da tecnologia, tornando processos mais inteligentes, eficientes e escaláveis. A empresa desenvolve tecnologia como meio para gerar produtividade, melhorar a experiência do cliente e apoiar o crescimento sustentável.
+
+A Atlas Systems é para empresas que não querem apenas acompanhar o futuro — querem liderar.
+
+Os projetos identificados como conceituais são demonstrações de capacidade criativa e técnica. Eles não representam clientes reais nem vínculo comercial com as marcas, empresas ou estabelecimentos mencionados.
+
+## Site
+
+- [Página principal](/): visão geral da Atlas Systems, seus serviços, resultados, processo e formas de contato.
+- [Serviços](/#servicos): detalhes sobre as soluções digitais oferecidas pela Atlas Systems.
+- [Projetos selecionados](/#projetos): demonstrações de experiências digitais criadas pela Atlas Systems.
+- [Sobre a Atlas Systems](/#sobre): missão, visão, valores e posicionamento da empresa.
+- [Contato](/#contato): WhatsApp, e-mail e canais oficiais para novos projetos.
+
+## Projetos selecionados
+
+- [Clínica Lúmina](https://clinica-omega-lemon.vercel.app/): projeto conceitual de uma experiência digital premium para uma clínica odontológica contemporânea, com tratamentos, tecnologia, diferenciais e agendamento.
+- [Alpine Sanctuaries](https://alpine-sanctuaries.vercel.app/): projeto conceitual editorial sobre hotéis suíços, com narrativa visual, transições cinematográficas e exploração interativa.
+- [Portfólio completo da Atlas Systems](https://atlas-portfolio-v2.vercel.app/): coleção de projetos e experiências digitais desenvolvidas pela Atlas Systems.
+
+## Contato
+
+- [Conversar pelo WhatsApp](https://wa.me/5511930534679): canal principal para propostas, dúvidas e novos projetos.
+- [Enviar e-mail](mailto:atlassystems.contact@gmail.com): contato oficial da Atlas Systems.
+- [Instagram](https://www.instagram.com/atlas.systemss/): perfil oficial da Atlas Systems.
+- [LinkedIn](https://www.linkedin.com/in/atlas-systems-875aa740b): perfil profissional da Atlas Systems.
+
+## Optional
+
+- [Portfólio externo](https://atlas-portfolio-v2.vercel.app/): outros projetos e estudos visuais da Atlas Systems.
+- [Instagram da Atlas Systems](https://www.instagram.com/atlas.systemss/): conteúdo institucional e atualizações.
