@@ -1,0 +1,21 @@
+{
+  "name": "Atlas Systems",
+  "short_name": "Atlas",
+  "description": "Sistemas, automações e experiências digitais orientadas a resultados.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eeeeec",
+  "theme_color": "#d5f74c",
+  "icons": [
+    {
+      "src": "/assets/brand/atlas-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/atlas-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
