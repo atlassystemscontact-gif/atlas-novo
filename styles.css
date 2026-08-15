@@ -490,7 +490,7 @@ body.menu-open .menu-toggle span:last-child {
   display: grid;
   place-items: center end;
   color: var(--ink);
-  content: "atlas\A systems\A digital";
+  content: "atlas\A systems";
   font-family: "Inter Tight", sans-serif;
   font-size: clamp(80px, 15vw, 220px);
   font-weight: 700;
@@ -1976,8 +1976,8 @@ body.menu-open .menu-toggle span:last-child {
 .hero .hero-content > .eyebrow {
   position: absolute;
   top: 22%;
-  left: var(--gutter);
-  max-width: 210px;
+  left: max(var(--gutter), 78px);
+  max-width: 230px;
   opacity: 0;
   animation: hero-copy-in 700ms .45s var(--ease-out) forwards;
 }

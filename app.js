@@ -906,7 +906,7 @@
     const loadWebGL = () => {
       if (document.querySelector('script[data-atlas-webgl]')) return;
       const script = document.createElement("script");
-      script.src = "hero3d.js?v=6";
+      script.src = "hero3d.js?v=7";
       script.async = true;
       script.dataset.atlasWebgl = "true";
       document.head.append(script);

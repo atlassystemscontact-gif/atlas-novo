@@ -434,8 +434,8 @@
     typeCanvas.height = height;
     const context = typeCanvas.getContext("2d");
     const mobile = width / (window.devicePixelRatio || 1) < 700;
-    const fontSize = width * (mobile ? .154 : .174);
-    const lineHeight = fontSize * .81;
+    const fontSize = width * (mobile ? .17 : .19);
+    const lineHeight = fontSize * .82;
     const rightEdge = width * (mobile ? .94 : .96);
     const centerY = height * (mobile ? .5 : .51);
 
@@ -446,9 +446,8 @@
     context.font = `650 ${fontSize}px "Inter Tight", "Helvetica Neue", Arial, sans-serif`;
     if ("letterSpacing" in context) context.letterSpacing = `${fontSize * -.035}px`;
 
-    context.fillText("atlas", rightEdge, centerY - lineHeight);
-    context.fillText("systems", rightEdge, centerY);
-    context.fillText("digital", rightEdge, centerY + lineHeight);
+    context.fillText("atlas", rightEdge, centerY - lineHeight * .5);
+    context.fillText("systems", rightEdge, centerY + lineHeight * .5);
 
     if (!textTexture) textTexture = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, textTexture);
@@ -462,11 +461,11 @@
   }
 
   function resize() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.1);
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.35);
     const desiredWidth = Math.max(1, canvas.clientWidth * dpr);
     const desiredHeight = Math.max(1, canvas.clientHeight * dpr);
-    const maxPixels = 1_200_000;
-    const maxDimension = 1600;
+    const maxPixels = 1_800_000;
+    const maxDimension = 1900;
     const pixelScale = Math.sqrt(maxPixels / (desiredWidth * desiredHeight));
     const dimensionScale = maxDimension / Math.max(desiredWidth, desiredHeight);
     const renderScale = Math.min(1, pixelScale, dimensionScale);
