@@ -1,26 +1,27 @@
 # Atlas Systems
 
-> A Atlas Systems é uma empresa brasileira de soluções digitais especializada em automação com inteligência artificial, landing pages de alta conversão, sistemas personalizados, bots inteligentes e integrações entre sistemas.
+> A Atlas Systems é uma empresa brasileira especializada no desenvolvimento de sistemas personalizados para tornar empresas mais eficientes, organizadas e preparadas para crescer.
 
-A Atlas Systems transforma desafios operacionais e comerciais em experiências digitais eficientes, escaláveis e orientadas a resultados. A empresa atende clientes no Brasil e no exterior. O conteúdo principal do site está disponível em português do Brasil, com opção de navegação em inglês.
+A Atlas Systems transforma desafios operacionais em sistemas sob medida, eficientes, escaláveis e orientados a resultados. Automação com inteligência artificial, bots, integrações e experiências digitais são capacidades complementares incorporadas conforme a necessidade de cada projeto. A empresa atende clientes no Brasil e no exterior. O conteúdo principal do site está disponível em português do Brasil, com opção de navegação em inglês.
 
 Informações essenciais:
 
 - Nome oficial: Atlas Systems
 - Localização: São Paulo, Brasil
-- Área de atuação: desenvolvimento de sistemas, automação, inteligência artificial e experiências digitais
+- Especialidade principal: desenvolvimento de sistemas personalizados
+- Capacidades complementares: automação, inteligência artificial, bots, integrações e experiências digitais
 - Atendimento: Brasil e exterior
 - Idiomas do site: português do Brasil e inglês
 - E-mail: atlassystems.contact@gmail.com
 - WhatsApp: +55 11 93053-4679
 
-Serviços e capacidades:
+Serviço principal e capacidades complementares:
 
-- Automação com inteligência artificial: processos internos, tarefas repetitivas, fluxos de atendimento e operações baseadas em dados.
-- Landing pages: páginas rápidas e estratégicas para campanhas, captação de leads, vendas e posicionamento de marca.
 - Sistemas personalizados: plataformas internas, dashboards, sistemas de gestão e ferramentas operacionais sob medida.
+- Automação com inteligência artificial: processos internos, tarefas repetitivas, fluxos de atendimento e operações baseadas em dados.
 - Bots inteligentes: automação de atendimento, vendas, suporte, qualificação e agendamento, incluindo WhatsApp.
 - Integração de sistemas: conexão entre ferramentas, dados, APIs e canais para reduzir retrabalho.
+- Landing pages: páginas rápidas e estratégicas para campanhas, captação de leads, vendas e posicionamento de marca.
 - Otimização contínua: análise de desempenho, testes, melhorias técnicas e evolução de soluções digitais.
 
 Processo de trabalho:
@@ -42,7 +43,11 @@ Os projetos identificados como conceituais são demonstrações de capacidade cr
 ## Site
 
 - [Página principal](/): visão geral da Atlas Systems, seus serviços, resultados, processo e formas de contato.
-- [Serviços](/#servicos): detalhes sobre as soluções digitais oferecidas pela Atlas Systems.
+- [Desenvolvimento de sistemas](/desenvolvimento-de-sistemas/): serviço principal da Atlas Systems para plataformas, dashboards e ferramentas operacionais sob medida.
+- [Automação com IA](/automacao-com-ia/): automações para processos internos, dados e tarefas repetitivas.
+- [Bots para WhatsApp](/bots-para-whatsapp/): bots para atendimento, qualificação e encaminhamento de oportunidades.
+- [Landing pages](/landing-pages/): páginas estratégicas para campanhas, leads e vendas.
+- [Serviços](/#servicos): visão geral das soluções oferecidas pela Atlas Systems.
 - [Projetos selecionados](/#projetos): demonstrações de experiências digitais criadas pela Atlas Systems.
 - [Sobre a Atlas Systems](/#sobre): missão, visão, valores e posicionamento da empresa.
 - [Contato](/#contato): WhatsApp, e-mail e canais oficiais para novos projetos.
