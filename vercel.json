@@ -10,7 +10,7 @@
       ]
     },
     {
-      "source": "/(styles.css|app.js|hero3d.js)",
+      "source": "/(styles.css|app.js|hero3d.js|service-pages.css|service-pages.js)",
       "headers": [
         {
           "key": "Cache-Control",
