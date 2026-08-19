@@ -5594,3 +5594,491 @@ body.menu-open .menu-toggle span:last-child {
     border-right-color: var(--white);
   }
 }
+
+/* Mobile refinement — compact hierarchy, readable copy and touch-friendly spacing */
+@media (max-width: 720px) {
+  :root {
+    --header-height: 72px;
+    --gutter: 20px;
+    --radius-lg: 24px;
+  }
+
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  main > section:not(.hero) {
+    content-visibility: visible;
+    contain-intrinsic-size: none;
+  }
+
+  section[id] {
+    scroll-margin-top: calc(var(--header-height) + 12px);
+  }
+
+  .site-header,
+  .site-header.is-scrolled {
+    height: var(--header-height);
+  }
+
+  .header-inner {
+    width: calc(100% - 24px);
+  }
+
+  .brand-mark,
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .header-portfolio {
+    min-height: 40px;
+    padding-inline: 13px;
+    font-size: 10.5px;
+  }
+
+  #lang-toggle,
+  .language-toggle,
+  .lang-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 9px;
+  }
+
+  #menu-toggle,
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 10px 8px;
+  }
+
+  .site-nav,
+  .desktop-nav,
+  .primary-nav {
+    top: var(--header-height);
+    height: calc(100svh - var(--header-height));
+  }
+
+  .site-nav a,
+  .desktop-nav a,
+  .primary-nav a,
+  .nav-link {
+    margin: 0;
+    font-size: clamp(38px, 12vw, 52px);
+  }
+
+  #scene,
+  .hero {
+    height: 100svh;
+    min-height: 680px;
+  }
+
+  .hero .hero-content > .eyebrow {
+    top: 21%;
+    left: 20px;
+    max-width: 250px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .hero .hero-content > h1,
+  .hero .hero-copy {
+    contain: strict;
+  }
+
+  .webgl-fallback::before {
+    inset: 48% 6% auto 16%;
+    font-size: clamp(66px, 20vw, 82px);
+    line-height: .78;
+  }
+
+  .webgl-fallback::after {
+    top: 43%;
+    left: 38%;
+    width: clamp(150px, 44vw, 178px);
+  }
+
+  .scroll-hint {
+    bottom: 10%;
+    left: 20px;
+    color: rgba(5, 5, 5, .74);
+    font-size: 11px;
+  }
+
+  .clients-section,
+  .clients {
+    padding: 74px 0 70px;
+  }
+
+  .clients .section-intro {
+    display: block;
+    width: calc(100% - 40px);
+    margin-bottom: 38px;
+  }
+
+  .clients .section-intro .section-index {
+    margin-bottom: 22px;
+  }
+
+  .clients .section-intro h2 {
+    max-width: 330px;
+    font-size: clamp(42px, 13vw, 52px);
+    line-height: .94;
+  }
+
+  .client-list li {
+    width: min(70vw, 248px);
+    height: 150px;
+    padding: 18px;
+    font-size: 21px;
+  }
+
+  .projects,
+  #projetos,
+  .metrics,
+  #servicos.services,
+  .process-section,
+  .testimonials,
+  .about,
+  .insights {
+    scroll-margin-top: calc(var(--header-height) + 12px);
+  }
+
+  .projects,
+  #projetos {
+    padding-block: 76px 92px;
+  }
+
+  .section-heading,
+  .section-heading.compact,
+  .about .section-heading,
+  .testimonials .section-heading.compact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 44px;
+  }
+
+  .section-heading > div:first-child {
+    padding-top: 0;
+  }
+
+  .section-heading > h2,
+  .testimonials .section-heading > h2,
+  .about .section-heading > h2 {
+    max-width: 100%;
+    font-size: clamp(44px, 13vw, 54px);
+    letter-spacing: -.055em;
+    line-height: .96;
+    overflow-wrap: anywhere;
+  }
+
+  .section-heading > p,
+  .section-heading > .about-copy,
+  .about-copy p {
+    max-width: 100%;
+    margin-top: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .project-showcase-grid {
+    gap: 14px;
+  }
+
+  .project-case-preview,
+  .project-site-visual,
+  .project-more-link {
+    border-radius: 24px;
+  }
+
+  .project-case-meta {
+    min-height: 0;
+    padding: 24px 4px 34px;
+  }
+
+  .project-more-card,
+  .project-more-link {
+    min-height: min(440px, 108vw);
+  }
+
+  .project-more-title {
+    font-size: clamp(52px, 17vw, 68px);
+  }
+
+  .metrics {
+    padding: 72px 0 84px;
+    border-radius: 24px;
+  }
+
+  .metric-item {
+    min-height: 190px;
+    padding: 26px;
+  }
+
+  .metric-item dd {
+    font-size: clamp(48px, 15vw, 62px);
+  }
+
+  .metric-item .metric-outcome {
+    font-size: clamp(29px, 9vw, 38px);
+    line-height: .98;
+  }
+
+  #servicos.services {
+    padding: 46px 20px 62px;
+  }
+
+  .services-reference-heading {
+    padding-bottom: 54px;
+  }
+
+  .services-reference-heading .eyebrow {
+    padding-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .services-reference-heading h2 {
+    max-width: 100%;
+    font-size: clamp(43px, 12.5vw, 52px);
+    letter-spacing: -.055em;
+    line-height: .93;
+    overflow-wrap: anywhere;
+  }
+
+  .services-reference-copy {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  #services-accordion .service-trigger,
+  #services-accordion .service-item.is-open .service-trigger {
+    min-height: 68px;
+    gap: 14px;
+    padding: 18px 2px;
+  }
+
+  #services-accordion .service-trigger > span:first-child {
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  #services-accordion .service-panel-content {
+    gap: 22px;
+    padding: 2px 2px 30px;
+  }
+
+  #services-accordion .service-summary p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  #services-accordion .service-outcomes {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  #services-accordion .service-tag {
+    padding: 8px 12px;
+    font-size: 10.5px;
+  }
+
+  #services-accordion .service-item.is-open .service-panel {
+    max-height: 820px;
+  }
+
+  .process-section {
+    padding: 78px 0 92px;
+    overflow: hidden;
+  }
+
+  .process-layout > .section-heading {
+    margin-bottom: 50px;
+  }
+
+  #process.process {
+    width: min(calc(100% - 12px), 370px);
+  }
+
+  #process .process-node {
+    font-size: 10px;
+    line-height: 1.12;
+  }
+
+  #process .process-detail {
+    width: min(142px, 39vw);
+  }
+
+  #process .process-detail > p:last-child {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .testimonials {
+    padding-block: 78px 92px;
+  }
+
+  .testimonials .testimonial-track {
+    gap: 12px;
+    padding-inline: 2px;
+  }
+
+  .testimonials .testimonial-card {
+    min-height: 300px;
+    flex-basis: min(88%, 360px);
+    padding: 26px;
+  }
+
+  .testimonial-card blockquote p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .about {
+    padding-block: 78px 96px;
+  }
+
+  .about .section-heading {
+    gap: 28px;
+  }
+
+  .team {
+    margin-left: 0;
+  }
+
+  .team > h3 {
+    margin-bottom: 30px;
+    font-size: clamp(34px, 10vw, 43px);
+    line-height: .98;
+  }
+
+  .team-card {
+    min-height: 235px;
+    padding: 26px 118px 24px 22px;
+  }
+
+  .team-card > p {
+    font-size: 11px;
+  }
+
+  .insights {
+    padding-block: 78px 96px;
+  }
+
+  .insight-item,
+  .timeline-item {
+    padding-left: 27px;
+  }
+
+  .insight-content {
+    min-height: 0;
+    padding: 24px 22px 68px;
+    border-radius: 22px;
+  }
+
+  .insight-content h3 {
+    font-size: 25px;
+    line-height: 1.05;
+  }
+
+  .insight-content > p:last-child {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  #contato.contact {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  #contato .contact-intro {
+    min-height: 430px;
+    padding: 38px 18px 64px;
+  }
+
+  #contato .contact-intro h2 {
+    max-width: 100%;
+    font-size: clamp(44px, 13vw, 54px);
+    line-height: .98;
+  }
+
+  #contato .contact-intro p {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  #contact-form.contact-form {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  #contact-form .form-field input:not([type="checkbox"]),
+  #contact-form .form-field select {
+    height: 46px;
+  }
+
+  #contact-form .form-field textarea {
+    min-height: 112px;
+  }
+
+  .site-footer {
+    padding-block: 38px 30px;
+  }
+
+  .site-footer .section-shell {
+    width: calc(100% - 40px);
+  }
+
+  .site-footer .footer-main {
+    gap: 36px;
+    padding-bottom: 52px;
+  }
+
+  .site-footer .footer-main .footer-brand .brand-mark {
+    width: 78px;
+    height: 78px;
+  }
+
+  .site-footer .footer-statement,
+  .site-footer .footer-column p,
+  .site-footer .footer-column a,
+  .site-footer .footer-nav a,
+  .site-footer .footer-social a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-portfolio {
+    padding-inline: 10px;
+    font-size: 9.5px;
+  }
+
+  #lang-toggle,
+  .language-toggle,
+  .lang-toggle,
+  #menu-toggle,
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .services-reference-heading h2,
+  .section-heading > h2,
+  .testimonials .section-heading > h2,
+  .about .section-heading > h2 {
+    font-size: 42px;
+  }
+}
