@@ -92,7 +92,7 @@
       "previews.landing.kicker": "Crescimento previsível",
       "previews.landing.title": "Mais leads. Menos atrito.",
       "previews.landing.copy": "Uma página rápida, clara e pronta para converter.",
-      "previews.landing.cta": "Quero crescer ↗",
+      "previews.landing.cta": "Quero crescer ↗︎",
       "previews.landing.formTitle": "Receba o plano",
       "previews.landing.formCta": "Começar agora",
       "previews.landing.proof": "conversão na campanha",
@@ -457,7 +457,7 @@
       "previews.landing.kicker": "Predictable growth",
       "previews.landing.title": "More leads. Less friction.",
       "previews.landing.copy": "A fast, clear page built to convert.",
-      "previews.landing.cta": "I want to grow ↗",
+      "previews.landing.cta": "I want to grow ↗︎",
       "previews.landing.formTitle": "Get the plan",
       "previews.landing.formCta": "Start now",
       "previews.landing.proof": "campaign conversion",
@@ -897,20 +897,20 @@
 
     scene.classList.add("webgl-fallback");
 
-    const useLightweightVersion = reducedMotionQuery.matches || window.matchMedia("(max-width: 820px)").matches;
-    if (useLightweightVersion) {
-      canvas.hidden = true;
-      return;
-    }
-
     const loadWebGL = () => {
       if (document.querySelector('script[data-atlas-webgl]')) return;
       const script = document.createElement("script");
-      script.src = "hero3d.js?v=7";
+      script.src = "hero3d.js?v=8";
       script.async = true;
       script.dataset.atlasWebgl = "true";
       document.head.append(script);
     };
+
+    const mobileHeroQuery = window.matchMedia("(max-width: 820px)");
+    if (mobileHeroQuery.matches || reducedMotionQuery.matches) {
+      loadWebGL();
+      return;
+    }
 
     window.addEventListener("pointermove", loadWebGL, { once: true, passive: true });
     window.addEventListener("pointerdown", loadWebGL, { once: true, passive: true });
