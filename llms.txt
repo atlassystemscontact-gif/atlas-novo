@@ -62,10 +62,10 @@ Os projetos identificados como conceituais são demonstrações de capacidade cr
 
 - [Conversar pelo WhatsApp](https://wa.me/5511930534679): canal principal para propostas, dúvidas e novos projetos.
 - [Enviar e-mail](mailto:atlassystems.contact@gmail.com): contato oficial da Atlas Systems.
-- [Instagram](https://www.instagram.com/atlas.systemss/): perfil oficial da Atlas Systems.
-- [LinkedIn](https://www.linkedin.com/in/atlas-systems-875aa740b): perfil profissional da Atlas Systems.
+- [Instagram](https://www.instagram.com/atlassystems.digital/): perfil oficial da Atlas Systems.
+- [LinkedIn](https://www.linkedin.com/in/gabriel-souza-875aa740b/): perfil profissional da Atlas Systems.
 
 ## Optional
 
 - [Portfólio externo](https://atlas-portfolio-v2.vercel.app/): outros projetos e estudos visuais da Atlas Systems.
-- [Instagram da Atlas Systems](https://www.instagram.com/atlas.systemss/): conteúdo institucional e atualizações.
+- [Instagram da Atlas Systems](https://www.instagram.com/atlassystems.digital/): conteúdo institucional e atualizações.
